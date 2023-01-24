@@ -173,7 +173,8 @@ class AdminController extends BaseController
         $description = Zend_Filter::filterStatic($this->getRequest()->getParam('desc'), 'StripTags');
         $locRootID = Zend_Filter::filterStatic($this->getRequest()->getParam('locRootID'), 'StripTags');
 
-        if ((!empty($title) || is_numeric($title)) && is_numeric($locRootID)) {
+        if ((!empty($title) || is_numeric($title)) && is_numeric($locRootID))
+        {
             $data['title'] = $title;
             $data['description'] = $description;
 
@@ -364,7 +365,8 @@ class AdminController extends BaseController
         $title = Zend_Filter::filterStatic($this->getRequest()->getParam('title'), 'StripTags');
         $description = Zend_Filter::filterStatic($this->getRequest()->getParam('desc'), 'StripTags');
 
-        if (!empty($title) || is_numeric($title)) {
+        if (!empty($title) || is_numeric($title))
+        {
             $data['title'] = $title;
             $data['description'] = $description;
             try {
